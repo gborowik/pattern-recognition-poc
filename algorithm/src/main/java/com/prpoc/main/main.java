@@ -1,4 +1,4 @@
-package com.prsnnpoc.algorithm.main;
+package com.prpoc.main;
 
 /**
  * Created by Grzegorz Borowik on 2017-10-03 10:11 AM.
