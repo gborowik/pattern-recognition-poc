@@ -5,3 +5,14 @@ package com.prpoc.main;
  * e-mail: borowik.grzegorz@gmail.com
  */
 
+public class main{
+
+
+
+
+    public static void main(String[] args){
+
+    }
+
+
+}
