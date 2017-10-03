@@ -1,6 +1,6 @@
 package com.prpoc.main;
 
-class DirectedEdge<T, N> {
+class DirectedEdge<T> {
     public T origin;
     public T end;
 
