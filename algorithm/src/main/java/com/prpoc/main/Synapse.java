@@ -27,4 +27,9 @@ public class Synapse extends DirectedEdge<Neuron> {
     public String toString() {
         return super.toString() + " weight " + weight;
     }
+
+    public Synapse fire(double value) {
+        end.charge(value * weight);
+        return this;
+    }
 }
