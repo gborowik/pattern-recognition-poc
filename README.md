@@ -1,1 +1,1 @@
-# pattern-recognition-poc
+# Simple Pattern recognition using SNN PoC
