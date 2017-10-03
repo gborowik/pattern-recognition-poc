@@ -1,5 +1,7 @@
 package com.prpoc.main;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +11,26 @@ import java.util.List;
  * e-mail: borowik.grzegorz@gmail.com
  */
 
-public class main {
+public class Main {
+
+    class Neuron {
+        double voltage;
+
+    }
+
+    class Synapse extends Pair<Neuron, Neuron> {
+
+        double weight;
+
+        public Synapse(Neuron first, Neuron second) {
+            super(first, second);
+        }
+
+        public void updateWeight() {
+
+        }
+
+    }
 
     List<Integer> properImage = new ArrayList<>(Arrays.asList
             (0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0));
@@ -23,7 +44,6 @@ public class main {
     List<Synapse> synapses = new ArrayList<>();
 
     Integer tick;
-
 
 
     public static void main(String[] args) {
