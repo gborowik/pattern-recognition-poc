@@ -1,6 +1,6 @@
 package com.prpoc.main;
 
 public class Constants {
-    static double defaultSynapseWeight = 0.5;
-    static double defaultFireThreshold = 1.0;
+    static Double defaultSynapseWeight = 0.5;
+    static Double defaultFireThreshold = 1.0;
 }
