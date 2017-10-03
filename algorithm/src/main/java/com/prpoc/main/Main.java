@@ -13,25 +13,6 @@ import java.util.List;
 
 public class Main {
 
-    class Neuron {
-        double voltage;
-
-    }
-
-    class Synapse extends Pair<Neuron, Neuron> {
-
-        double weight;
-
-        public Synapse(Neuron first, Neuron second) {
-            super(first, second);
-        }
-
-        public void updateWeight() {
-
-        }
-
-    }
-
     List<Integer> properImage = new ArrayList<>(Arrays.asList
             (0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0));
 
