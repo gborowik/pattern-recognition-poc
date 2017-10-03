@@ -2,7 +2,7 @@ package com.prpoc.main;
 
 import static com.prpoc.main.Constants.initialSynapseWeight;
 
-class Synapse extends DirectedEdge<Neuron, Neuron> {
+public class Synapse extends DirectedEdge<Neuron> {
 
     private double weight = initialSynapseWeight;
 
