@@ -7,4 +7,5 @@ public abstract class Node<E> {
     protected Set<E> in;
     protected Set<E> out;
 
+    public abstract String toString();
 }

@@ -1,7 +1,5 @@
 package com.prpoc.main;
 
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

@@ -8,4 +8,6 @@ public abstract class DirectedEdge<T> {
         this.origin = origin;
         this.end = end;
     }
+
+    public abstract String toString();
 }

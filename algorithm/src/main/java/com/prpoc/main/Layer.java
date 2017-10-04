@@ -6,4 +6,5 @@ public abstract class Layer {
 
     protected Set<Node> nodes;
 
+    public abstract String toString();
 }

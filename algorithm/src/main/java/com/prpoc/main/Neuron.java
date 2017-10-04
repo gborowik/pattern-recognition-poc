@@ -27,4 +27,8 @@ public class Neuron extends Node<Synapse> {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return null;
+    }
 }

@@ -24,12 +24,13 @@ public class Synapse extends DirectedEdge<Neuron> {
         return weight;
     }
 
-    public String toString() {
-        return super.toString() + " weight " + weight;
-    }
-
     public Synapse fire(double value) {
         end.charge(value * weight);
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return origin + " - " + end + ", weight: " + weight;
     }
 }

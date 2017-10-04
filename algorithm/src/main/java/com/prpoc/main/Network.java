@@ -10,4 +10,6 @@ public abstract class Network {
 
     Set<DirectedEdge> directedEdges;
 
+    public abstract String toString();
+
 }
