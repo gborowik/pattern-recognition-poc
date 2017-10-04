@@ -6,24 +6,24 @@ public class Neuron extends Node<Synapse> {
 
     private Double fireThreshold;
 
-    Double charge;
+    Double chargeLevel;
 
     public void reset() {
         fireThreshold = defaultFireThreshold;
-        charge = 0.0;
+        chargeLevel = 0.0;
     }
 
     Double value;
 
     public void tick() {
-        if (charge >= fireThreshold) {
+        if (chargeLevel >= fireThreshold) {
             in.stream().forEach(synapse -> synapse.fire(value)); //update value -> function
         }
-        charge = 0.0;
+        chargeLevel = 0.0;
     }
 
     public Neuron charge(Double value){
-        charge += value;
+        chargeLevel += value;
         return this;
     }
 
