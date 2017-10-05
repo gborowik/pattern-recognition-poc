@@ -18,16 +18,16 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
     public NeuralNetwork learn(List<List<List<Integer>>> inputData, List<Integer> scenario) {
         List<List<List<Double>>> encodedData = encoder(inputData);
 
-        stimulate(encodedData, scenario);
+        stimulateEncoded(encodedData, scenario);
 
         return this;
     }
 
-    private void stimulate(List<List<List<Double>>> encodedData, List<Integer> scenario) {
-        scenario.stream().forEach(scene -> stimulate(encodedData.get(scene)));
+    private void stimulateEncoded(List<List<List<Double>>> encodedData, List<Integer> scenario) {
+        scenario.stream().forEach(scene -> stimulateScene(encodedData.get(scene)));
     }
 
-    private void stimulate(List<List<Double>> encodedData) {
+    private void stimulateScene(List<List<Double>> encodedData) {
         StreamUtils.zip(inNodes.stream(), encodedData.get(0).stream(), (neuron, val) -> neuron.spike(val));
         outNodes.get(0).spike(encodedData.get(1).get(0));
     }
@@ -41,4 +41,22 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
                         .collect(Collectors.toList()))
                 .collect(Collectors.toList());
     }
+
+    public NeuralNetwork launch(List<List<List<Integer>>> inputData, List<Integer> scenario) {
+        List<List<List<Double>>> encodedData = encoder(inputData);
+
+        launchEncoded(encodedData, scenario);
+
+        return this;
+    }
+
+    private void launchEncoded(List<List<List<Double>>> encodedData, List<Integer> scenario) {
+        scenario.stream().forEach(scene -> launchScene(encodedData.get(scene)));
+    }
+
+    private void launchScene(List<List<Double>> encodedData) {
+        StreamUtils.zip(inNodes.stream(), encodedData.get(0).stream(), (neuron, val) -> neuron.spike(val));
+    }
+
+
 }

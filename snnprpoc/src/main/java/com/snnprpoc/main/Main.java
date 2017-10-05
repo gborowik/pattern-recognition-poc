@@ -1,6 +1,7 @@
 package com.snnprpoc.main;
 
 import static com.snnprpoc.main.Constants.inputData;
+import static com.snnprpoc.main.Constants.launchScenario;
 import static com.snnprpoc.main.Constants.scenario;
 import static com.snnprpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
 import static com.snnprpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
@@ -25,6 +26,8 @@ public class Main {
                 .addEdges(generateAllSynapsesBetweenFollowingLayers(neuralNetwork.getLayers()));
 
         neuralNetwork.learn(inputData, scenario);
+
+        neuralNetwork.launch(inputData, launchScenario);
 
     }
 }
