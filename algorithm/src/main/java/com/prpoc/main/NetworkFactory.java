@@ -1,8 +1,6 @@
 package com.prpoc.main;
 
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 public abstract class NetworkFactory<T, E> {
 

@@ -1,7 +1,6 @@
 package com.prpoc.main;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class NNFactory extends NetworkFactory<Neuron, Synapse> {
