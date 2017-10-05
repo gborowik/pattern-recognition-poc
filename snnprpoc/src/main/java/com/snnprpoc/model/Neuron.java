@@ -1,8 +1,8 @@
-package com.prpoc.model;
+package com.snnprpoc.model;
 
-import com.prpoc.graph.Node;
+import com.snnprpoc.graph.Node;
 
-import static com.prpoc.main.Constants.defaultFireThreshold;
+import static com.snnprpoc.main.Constants.defaultFireThreshold;
 
 public class Neuron extends Node<Synapse> {
 

@@ -1,4 +1,4 @@
-package com.prpoc.main;
+package com.snnprpoc.main;
 
 import java.util.ArrayList;
 import java.util.Arrays;

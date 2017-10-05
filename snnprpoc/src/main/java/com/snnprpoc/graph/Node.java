@@ -1,4 +1,4 @@
-package com.prpoc.graph;
+package com.snnprpoc.graph;
 
 import java.util.Set;
 

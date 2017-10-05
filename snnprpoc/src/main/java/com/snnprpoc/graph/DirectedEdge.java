@@ -1,4 +1,4 @@
-package com.prpoc.graph;
+package com.snnprpoc.graph;
 
 public class DirectedEdge<T> {
     public T origin;

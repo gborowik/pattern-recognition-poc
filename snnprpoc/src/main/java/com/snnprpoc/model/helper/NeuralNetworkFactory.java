@@ -1,8 +1,8 @@
-package com.prpoc.model.helper;
+package com.snnprpoc.model.helper;
 
-import com.prpoc.graph.Layer;
-import com.prpoc.model.Neuron;
-import com.prpoc.model.Synapse;
+import com.snnprpoc.graph.Layer;
+import com.snnprpoc.model.Neuron;
+import com.snnprpoc.model.Synapse;
 import one.util.streamex.StreamEx;
 
 import java.util.Collection;

@@ -1,8 +1,8 @@
-package com.prpoc.main;
+package com.snnprpoc.main;
 
-import com.prpoc.graph.Network;
-import com.prpoc.model.Neuron;
-import com.prpoc.model.Synapse;
+import com.snnprpoc.graph.Network;
+import com.snnprpoc.model.Neuron;
+import com.snnprpoc.model.Synapse;
 
 public class NeuralNetwork extends Network<Neuron, Synapse> {
 

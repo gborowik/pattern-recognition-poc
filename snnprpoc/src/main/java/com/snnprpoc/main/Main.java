@@ -1,7 +1,7 @@
-package com.prpoc.main;
+package com.snnprpoc.main;
 
-import static com.prpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
-import static com.prpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
+import static com.snnprpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
+import static com.snnprpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
 
 /**
  * Created by Grzegorz Borowik on 2017-10-03 10:11 AM.

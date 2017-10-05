@@ -1,8 +1,8 @@
-package com.prpoc.model;
+package com.snnprpoc.model;
 
-import com.prpoc.graph.DirectedEdge;
+import com.snnprpoc.graph.DirectedEdge;
 
-import static com.prpoc.main.Constants.defaultSynapseWeight;
+import static com.snnprpoc.main.Constants.defaultSynapseWeight;
 
 public class Synapse extends DirectedEdge<Neuron> {
 
