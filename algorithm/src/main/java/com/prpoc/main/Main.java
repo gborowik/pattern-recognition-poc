@@ -1,9 +1,5 @@
 package com.prpoc.main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import static com.prpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
 import static com.prpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
 
@@ -13,13 +9,6 @@ import static com.prpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
  */
 
 public class Main {
-
-    List<Integer> properImage = new ArrayList<>(Arrays.asList
-            (0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0));
-
-    List<Integer> wrongImage = new ArrayList<>(Arrays.asList
-            (1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1));
-
 
     public static void main(String[] args) {
 
