@@ -6,8 +6,6 @@ import com.prpoc.model.Synapse;
 
 public class NeuralNetwork extends Network<Neuron, Synapse> {
 
-
-
     @Override
     public String toString() {
         return null;

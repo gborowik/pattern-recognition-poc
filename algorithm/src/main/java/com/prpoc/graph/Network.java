@@ -65,6 +65,13 @@ public class Network<T, E> {
         return this;
     }
 
+    public Layer<T> getLayer(Integer idx) {
+        return layers.get(idx);
+    }
+
+    public List<Layer<T>> getLayers() {
+        return layers;
+    }
 
     public String toString() {
         return null;

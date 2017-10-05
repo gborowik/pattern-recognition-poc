@@ -1,11 +1,11 @@
 package com.prpoc.main;
 
-import com.prpoc.model.Neuron;
-import com.prpoc.model.Synapse;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.prpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
+import static com.prpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
 
 /**
  * Created by Grzegorz Borowik on 2017-10-03 10:11 AM.
@@ -20,15 +20,16 @@ public class Main {
     List<Integer> wrongImage = new ArrayList<>(Arrays.asList
             (1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1));
 
-    List<Neuron> inputNeurons = new ArrayList<>();
-    List<Neuron> outputNeurons = new ArrayList<>();
-
-    List<Synapse> synapses = new ArrayList<>();
-
-    Integer tick;
-
 
     public static void main(String[] args) {
+
+        NeuralNetwork neuralNetwork = new NeuralNetwork();
+
+        neuralNetwork
+                .addLayer(makeLayerOfSize(25))
+                .addLayer(makeLayerOfSize(5))
+                .addLayer(makeLayerOfSize(2))
+                .addEdges(generateAllSynapsesBetweenFollowingLayers(neuralNetwork.getLayers()));
 
     }
 }
