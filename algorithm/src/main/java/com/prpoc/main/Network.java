@@ -1,8 +1,6 @@
 package com.prpoc.main;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public abstract class Network<T, E> {
 
@@ -14,7 +12,7 @@ public abstract class Network<T, E> {
 
     protected Set<E> directedEdges = new HashSet<>();
 
-    protected Set<Layer<T>> layers = new HashSet<>();
+    protected List<Layer<T>> layers = new ArrayList<>();
 
 
     public void addNode(T node) {
