@@ -6,13 +6,13 @@ import java.util.Set;
 
 public abstract class Network {
 
-    protected Set<Node> nodes = new HashSet<>();
+    protected Set<Node<?>> nodes = new HashSet<>();
 
-    protected Set<Node> inNodes = new HashSet<>();
+    protected Set<Node<?>> inNodes = new HashSet<>();
 
-    protected Set<Node> outNodes = new HashSet<>();
+    protected Set<Node<?>> outNodes = new HashSet<>();
 
-    protected Set<DirectedEdge> directedEdges = new HashSet<>();
+    protected Set<DirectedEdge<?>> directedEdges = new HashSet<>();
 
     protected Set<Layer> layers = new HashSet<>();
 

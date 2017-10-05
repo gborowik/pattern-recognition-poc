@@ -6,7 +6,7 @@ import java.util.Set;
 
 public abstract class Layer {
 
-    protected Set<Node> nodes = new HashSet<>();
+    protected Set<Node<?>> nodes = new HashSet<>();
 
 
     public void addNode(Node<?> node) {
