@@ -8,6 +8,9 @@ public abstract class Layer<T> {
 
     protected Set<T> nodes = new HashSet<>();
 
+    public Layer(Collection<T> ns) {
+        this.nodes.addAll(ns);
+    }
 
     public void addNode(T node) {
         nodes.add(node);
@@ -17,7 +20,7 @@ public abstract class Layer<T> {
         nodes.addAll(ns);
     }
 
-    public Set<T> getNodes(){
+    public Set<T> getNodes() {
         return nodes;
     }
 

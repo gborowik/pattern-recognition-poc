@@ -7,8 +7,12 @@ import static com.prpoc.main.Constants.defaultFireThreshold;
 public class Neuron extends Node<Synapse> {
 
     private Double fireThreshold;
-
     private Double chargeLevel;
+
+    public Neuron(Integer id){
+        this.id = id;
+        reset();
+    }
 
     public void reset() {
         fireThreshold = defaultFireThreshold;
