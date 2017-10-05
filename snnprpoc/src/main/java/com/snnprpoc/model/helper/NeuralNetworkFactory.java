@@ -19,7 +19,7 @@ public class NeuralNetworkFactory {
         neuronId += number;
 
         return IntStream.range(neuronId - number, neuronId).boxed()
-                .map(Neuron::new).collect(Collectors.toSet());
+                .map(Neuron::new).collect(Collectors.toList());
     }
 
     public static Layer<Neuron> makeLayerOfSize(Integer number) {
