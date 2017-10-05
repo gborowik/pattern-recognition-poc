@@ -2,7 +2,7 @@ package com.prpoc.graph;
 
 import java.util.*;
 
-public abstract class Network<T, E> {
+public class Network<T, E> {
 
     protected Set<T> nodes = new HashSet<>();
 
@@ -15,47 +15,58 @@ public abstract class Network<T, E> {
     protected List<Layer<T>> layers = new ArrayList<>();
 
 
-    public void addNode(T node) {
+    public Network<T, E> addNode(T node) {
         nodes.add(node);
+        return this;
     }
 
-    public void addNodes(Collection<T> ns) {
+    public Network<T, E> addNodes(Collection<T> ns) {
         nodes.addAll(ns);
+        return this;
     }
 
-    public void addInputNode(T node) {
+    public Network<T, E> addInputNode(T node) {
         inNodes.add(node);
+        return this;
     }
 
-    public void addInputNodes(Collection<T> ns) {
+    public Network<T, E> addInputNodes(Collection<T> ns) {
         inNodes.addAll(ns);
+        return this;
     }
 
-    public void addOutputNode(T node) {
+    public Network<T, E> addOutputNode(T node) {
         outNodes.add(node);
+        return this;
     }
 
-    public void addOutputNodes(Collection<T> ns) {
+    public Network<T, E> addOutputNodes(Collection<T> ns) {
         outNodes.addAll(ns);
+        return this;
     }
 
-    public void addEdge(E edge) {
+    public Network<T, E> addEdge(E edge) {
         directedEdges.add(edge);
+        return this;
     }
 
-    public void addEdges(Collection<E> es) {
+    public Network<T, E> addEdges(Collection<E> es) {
         directedEdges.addAll(es);
+        return this;
     }
 
-    public void addLayer(Layer<T> layer) {
+    public Network<T, E> addLayer(Layer<T> layer) {
         layers.add(layer);
+        return this;
     }
 
-    public void addLayers(Collection<Layer<T>> ls) {
+    public Network<T, E> addLayers(Collection<Layer<T>> ls) {
         layers.addAll(ls);
+        return this;
     }
 
 
-    public abstract String toString();
-
+    public String toString() {
+        return null;
+    }
 }

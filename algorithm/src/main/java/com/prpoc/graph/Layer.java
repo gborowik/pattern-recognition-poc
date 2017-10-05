@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Layer<T> {
+public class Layer<T> {
 
     protected Set<T> nodes = new HashSet<>();
 
@@ -12,17 +12,21 @@ public abstract class Layer<T> {
         this.nodes.addAll(ns);
     }
 
-    public void addNode(T node) {
+    public Layer<T> addNode(T node) {
         nodes.add(node);
+        return this;
     }
 
-    public void addNodes(Collection<T> ns) {
+    public Layer<T> addNodes(Collection<T> ns) {
         nodes.addAll(ns);
+        return this;
     }
 
     public Set<T> getNodes() {
         return nodes;
     }
 
-    public abstract String toString();
+    public String toString() {
+        return null;
+    }
 }

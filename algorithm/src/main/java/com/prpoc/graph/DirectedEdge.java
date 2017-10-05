@@ -1,6 +1,6 @@
 package com.prpoc.graph;
 
-public abstract class DirectedEdge<T> {
+public class DirectedEdge<T> {
     public T origin;
     public T end;
 
@@ -9,5 +9,7 @@ public abstract class DirectedEdge<T> {
         this.end = end;
     }
 
-    public abstract String toString();
+    public String toString() {
+        return null;
+    }
 }
