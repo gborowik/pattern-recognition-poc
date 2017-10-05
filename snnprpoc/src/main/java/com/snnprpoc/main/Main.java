@@ -1,5 +1,7 @@
 package com.snnprpoc.main;
 
+import static com.snnprpoc.main.Constants.inputData;
+import static com.snnprpoc.main.Constants.scenario;
 import static com.snnprpoc.model.helper.NeuralNetworkFactory.generateAllSynapsesBetweenFollowingLayers;
 import static com.snnprpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize;
 
@@ -21,6 +23,8 @@ public class Main {
                 .addInputNodes(neuralNetwork.getFirstLayer().getNodes())
                 .addOutputNodes(neuralNetwork.getLastLayer().getNodes())
                 .addEdges(generateAllSynapsesBetweenFollowingLayers(neuralNetwork.getLayers()));
+
+        neuralNetwork.learn(inputData, scenario);
 
     }
 }

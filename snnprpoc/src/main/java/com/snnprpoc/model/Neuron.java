@@ -2,6 +2,8 @@ package com.snnprpoc.model;
 
 import com.snnprpoc.graph.Node;
 
+import java.util.List;
+
 import static com.snnprpoc.main.Constants.defaultFireThreshold;
 
 public class Neuron extends Node<Synapse> {
@@ -31,8 +33,14 @@ public class Neuron extends Node<Synapse> {
         return this;
     }
 
+    public Neuron spike(Double val) {
+
+        return this;
+    }
+
     @Override
     public String toString() {
         return null;
     }
+
 }
