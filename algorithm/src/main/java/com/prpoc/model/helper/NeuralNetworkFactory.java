@@ -13,22 +13,22 @@ import java.util.stream.IntStream;
 
 public class NeuralNetworkFactory {
 
-    static Integer neuronId = 0;
+    private static Integer neuronId = 0;
 
     public static Collection<Neuron> generateNeurons(Integer number) {
         neuronId += number;
 
         return IntStream.range(neuronId - number, neuronId).boxed()
-                .map(el -> new Neuron(el)).collect(Collectors.toSet());
+                .map(Neuron::new).collect(Collectors.toSet());
     }
 
     public static Layer<Neuron> makeLayerOfSize(Integer number) {
-        return new Layer<Neuron>(generateNeurons(number));
+        return new Layer<>(generateNeurons(number));
     }
 
     public static Collection<Synapse> generateAllSynapsesBetweenFollowingLayers(List<Layer<Neuron>> ls) {
         return StreamEx.of(ls)
-                .pairMap((first, second) -> generateAllSynapsesBetweenTwoLayers(first, second))
+                .pairMap(NeuralNetworkFactory::generateAllSynapsesBetweenTwoLayers)
                 .toFlatCollection(el -> el, HashSet::new);
     }
 

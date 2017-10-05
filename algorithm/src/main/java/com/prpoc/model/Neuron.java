@@ -21,7 +21,7 @@ public class Neuron extends Node<Synapse> {
 
     public void tick() {
         if (chargeLevel >= fireThreshold) {
-            in.stream().forEach(synapse -> synapse.fire(0.0)); //update value -> function
+            in.forEach(synapse -> synapse.fire(0.0)); //update value -> function
         }
         chargeLevel = 0.0;
     }
