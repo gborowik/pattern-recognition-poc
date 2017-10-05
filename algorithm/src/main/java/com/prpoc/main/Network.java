@@ -4,56 +4,56 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Network {
+public abstract class Network<T, E> {
 
-    protected Set<Node<?>> nodes = new HashSet<>();
+    protected Set<T> nodes = new HashSet<>();
 
-    protected Set<Node<?>> inNodes = new HashSet<>();
+    protected Set<T> inNodes = new HashSet<>();
 
-    protected Set<Node<?>> outNodes = new HashSet<>();
+    protected Set<T> outNodes = new HashSet<>();
 
-    protected Set<DirectedEdge<?>> directedEdges = new HashSet<>();
+    protected Set<E> directedEdges = new HashSet<>();
 
-    protected Set<Layer> layers = new HashSet<>();
+    protected Set<Layer<T>> layers = new HashSet<>();
 
 
-    public void addNode(Node<?> node) {
+    public void addNode(T node) {
         nodes.add(node);
     }
 
-    public void addNodes(Collection<Node<?>> ns) {
+    public void addNodes(Collection<T> ns) {
         nodes.addAll(ns);
     }
 
-    public void addInputNode(Node<?> node) {
+    public void addInputNode(T node) {
         inNodes.add(node);
     }
 
-    public void addInputNodes(Collection<Node<?>> ns) {
+    public void addInputNodes(Collection<T> ns) {
         inNodes.addAll(ns);
     }
 
-    public void addOutputNode(Node<?> node) {
+    public void addOutputNode(T node) {
         outNodes.add(node);
     }
 
-    public void addOutputNodes(Collection<Node<?>> ns) {
+    public void addOutputNodes(Collection<T> ns) {
         outNodes.addAll(ns);
     }
 
-    public void addEdge(DirectedEdge<?> edge) {
+    public void addEdge(E edge) {
         directedEdges.add(edge);
     }
 
-    public void addEdges(Collection<DirectedEdge<?>> es) {
+    public void addEdges(Collection<E> es) {
         directedEdges.addAll(es);
     }
 
-    public void addLayer(Layer layer) {
+    public void addLayer(Layer<T> layer) {
         layers.add(layer);
     }
 
-    public void addLayers(Collection<Layer> ls) {
+    public void addLayers(Collection<Layer<T>> ls) {
         layers.addAll(ls);
     }
 

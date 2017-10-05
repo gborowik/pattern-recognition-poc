@@ -4,19 +4,18 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Layer {
+public abstract class Layer<T> {
 
-    protected Set<Node<?>> nodes = new HashSet<>();
+    protected Set<T> nodes = new HashSet<>();
 
 
-    public void addNode(Node<?> node) {
+    public void addNode(T node) {
         nodes.add(node);
     }
 
-    public void addNodes(Collection<Node<?>> ns) {
+    public void addNodes(Collection<T> ns) {
         nodes.addAll(ns);
     }
-
 
     public abstract String toString();
 }
