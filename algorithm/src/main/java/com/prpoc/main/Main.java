@@ -1,5 +1,8 @@
 package com.prpoc.main;
 
+import com.prpoc.model.Neuron;
+import com.prpoc.model.Synapse;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

@@ -1,12 +1,14 @@
-package com.prpoc.main;
+package com.prpoc.model.helper;
 
 import com.prpoc.graph.Layer;
 import com.prpoc.graph.NetworkFactory;
+import com.prpoc.model.Neuron;
+import com.prpoc.model.Synapse;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class NNFactory implements NetworkFactory<Neuron, Synapse> {
+public class NeuralNetworkFactory implements NetworkFactory<Neuron, Synapse> {
     @Override
     public Collection<Synapse> generateAllSynapsesBetweenLayers(Layer<Neuron> layer1, Layer<Neuron> layer2) {
         return layer1.getNodes().stream()

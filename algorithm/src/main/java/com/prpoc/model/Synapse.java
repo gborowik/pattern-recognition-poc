@@ -1,4 +1,4 @@
-package com.prpoc.main;
+package com.prpoc.model;
 
 import com.prpoc.graph.DirectedEdge;
 
