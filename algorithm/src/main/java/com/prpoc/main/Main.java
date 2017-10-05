@@ -29,6 +29,8 @@ public class Main {
                 .addLayer(makeLayerOfSize(25))
                 .addLayer(makeLayerOfSize(5))
                 .addLayer(makeLayerOfSize(2))
+                .addInputNodes(neuralNetwork.getFirstLayer().getNodes())
+                .addOutputNodes(neuralNetwork.getLastLayer().getNodes())
                 .addEdges(generateAllSynapsesBetweenFollowingLayers(neuralNetwork.getLayers()));
 
     }

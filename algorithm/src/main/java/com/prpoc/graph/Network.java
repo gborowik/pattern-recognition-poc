@@ -73,6 +73,14 @@ public class Network<T, E> {
         return layers;
     }
 
+    public Layer<T> getFirstLayer() {
+        return layers != null && !layers.isEmpty() ? layers.get(0) : null;
+    }
+
+    public Layer<T> getLastLayer() {
+        return layers != null && !layers.isEmpty() ? layers.get(layers.size() - 1) : null;
+    }
+
     public String toString() {
         return null;
     }
