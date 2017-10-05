@@ -1,8 +1,8 @@
-package com.prpoc.main;
+package com.prpoc.graph;
 
 import java.util.Collection;
 
-public abstract class NetworkFactory<T, E> {
+public interface NetworkFactory<T, E> {
 
     public abstract Collection<E> generateAllSynapsesBetweenLayers(Layer<T> layer1, Layer<T> layer2);
 

@@ -1,4 +1,4 @@
-package com.prpoc.main;
+package com.prpoc.graph;
 
 import java.util.Set;
 

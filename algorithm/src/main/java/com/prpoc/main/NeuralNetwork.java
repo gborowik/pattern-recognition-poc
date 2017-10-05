@@ -1,5 +1,7 @@
 package com.prpoc.main;
 
+import com.prpoc.graph.Network;
+
 public class NeuralNetwork extends Network<Neuron, Synapse> {
 
 

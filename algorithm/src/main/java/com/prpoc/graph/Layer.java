@@ -1,4 +1,4 @@
-package com.prpoc.main;
+package com.prpoc.graph;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -15,6 +15,10 @@ public abstract class Layer<T> {
 
     public void addNodes(Collection<T> ns) {
         nodes.addAll(ns);
+    }
+
+    public Set<T> getNodes(){
+        return nodes;
     }
 
     public abstract String toString();

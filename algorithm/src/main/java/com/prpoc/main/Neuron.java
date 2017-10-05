@@ -1,5 +1,7 @@
 package com.prpoc.main;
 
+import com.prpoc.graph.Node;
+
 import static com.prpoc.main.Constants.defaultFireThreshold;
 
 public class Neuron extends Node<Synapse> {

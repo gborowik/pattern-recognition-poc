@@ -1,5 +1,7 @@
 package com.prpoc.main;
 
+import com.prpoc.graph.DirectedEdge;
+
 import static com.prpoc.main.Constants.defaultSynapseWeight;
 
 public class Synapse extends DirectedEdge<Neuron> {
