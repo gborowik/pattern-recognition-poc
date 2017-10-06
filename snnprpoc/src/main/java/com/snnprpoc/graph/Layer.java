@@ -1,12 +1,10 @@
 package com.snnprpoc.graph;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Layer<T> {
 
-    protected Set<T> nodes = new HashSet<>();
+    protected List<T> nodes = new ArrayList<>();
 
     public Layer(Collection<T> ns) {
         this.nodes.addAll(ns);
@@ -22,7 +20,7 @@ public class Layer<T> {
         return this;
     }
 
-    public Set<T> getNodes() {
+    public List<T> getNodes() {
         return nodes;
     }
 
