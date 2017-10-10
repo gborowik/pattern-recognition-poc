@@ -15,6 +15,7 @@ import java.util.stream.IntStream;
 public class NeuralNetworkFactory {
 
     private static Integer neuronId = 0;
+    private static Integer layerId = 0;
 
     public static Collection<Neuron> generateNeurons(Integer number) {
         neuronId += number;
@@ -24,7 +25,7 @@ public class NeuralNetworkFactory {
     }
 
     public static Layer<Neuron> makeLayerOfSize(Integer number) {
-        return new Layer<>(generateNeurons(number));
+        return new Layer<>(layerId++, generateNeurons(number));
     }
 
     public static Collection<Synapse> generateAllSynapsesBetweenFollowingLayers(List<Layer<Neuron>> ls) {

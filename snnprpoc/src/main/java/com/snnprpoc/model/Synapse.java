@@ -9,8 +9,7 @@ public class Synapse extends DirectedEdge<Neuron> {
     private Double weight;
 
     public Synapse(Neuron origin, Neuron end) {
-        super(origin, end);
-        weight = defaultSynapseWeight;
+        this(origin, end, defaultSynapseWeight);
     }
 
     public Synapse(Neuron origin, Neuron end, Double weight) {
