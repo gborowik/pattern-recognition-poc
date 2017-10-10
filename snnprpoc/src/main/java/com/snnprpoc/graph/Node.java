@@ -1,16 +1,17 @@
 package com.snnprpoc.graph;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Node<E> {
 
-    protected Set<E> in;
-    protected Set<E> out;
+    protected Set<E> in = new HashSet<>();
+    protected Set<E> out = new HashSet<>();
     protected Integer id;
 
-    public Set<E> addInConnection(E e) {
+    public E addInConnection(E e) {
         in.add(e);
-        return in;
+        return e;
     }
 
     public Set<E> addInConnections(Set<E> ins) {
@@ -18,9 +19,9 @@ public class Node<E> {
         return in;
     }
 
-    public Set<E> addOutConnection(E e) {
+    public E addOutConnection(E e) {
         out.add(e);
-        return out;
+        return e;
     }
 
     public Set<E> addOutConnections(Set<E> outs) {

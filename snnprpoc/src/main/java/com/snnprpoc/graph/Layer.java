@@ -1,11 +1,15 @@
 package com.snnprpoc.graph;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Layer<T> {
 
     protected List<T> nodes = new ArrayList<>();
+
+    public Layer() {
+    }
 
     public Layer(Collection<T> ns) {
         this.nodes.addAll(ns);
@@ -26,8 +30,7 @@ public class Layer<T> {
     }
 
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        for (Object n : getNodes()) result.append(n.toString());
-        return result.toString();
+        return "Layer: "
+                + String.join("\n", nodes.stream().map(node -> node.toString()).collect(Collectors.toList()));
     }
 }

@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Network<T, E> {
 
-    protected List<T> nodes = new ArrayList<T>();
+    protected List<T> nodes = new ArrayList<>();
 
-    protected List<T> inNodes = new ArrayList<T>();
+    protected List<T> inNodes = new ArrayList<>();
 
-    protected List<T> outNodes = new ArrayList<T>();
+    protected List<T> outNodes = new ArrayList<>();
 
     protected Set<E> directedEdges = new HashSet<>();
 
