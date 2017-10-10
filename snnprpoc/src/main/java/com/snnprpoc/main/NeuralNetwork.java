@@ -12,13 +12,8 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        int i = 0;
-        for (Object n : getLayers()) {
-            result.append("\nLayer:  " + i++ );
-            result.append(n.toString());
-        }
-        return result.toString();
+        return String.join("\n", layers.stream().map(el -> el.toString())
+                .collect(Collectors.toList()));
     }
 
     public NeuralNetwork learn(List<List<List<Integer>>> inputData, List<Integer> scenario) {

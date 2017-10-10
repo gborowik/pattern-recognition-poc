@@ -25,6 +25,8 @@ public class Main {
                 .addOutputNodes(neuralNetwork.getLastLayer().getNodes())
                 .addEdges(generateAllSynapsesBetweenFollowingLayers(neuralNetwork.getLayers()));
 
+        System.out.println(neuralNetwork.toString());
+
         neuralNetwork.learn(inputData, scenario);
 
         neuralNetwork.launch(inputData, launchScenario);
