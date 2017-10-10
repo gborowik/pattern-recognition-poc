@@ -39,14 +39,17 @@ public class Neuron extends Node<Synapse> {
         return this;
     }
 
+    public Integer getId(){
+        return this.id;
+    }
+
     @Override
     public String toString() {
         return "\n" +
                 "[Neuron: "
                 + id
-                + " chargeLevel: "
-                + chargeLevel + " thershold: "
-                + fireThreshold
+                + " chargeLevel: " + chargeLevel
+                + " fireThreshold: " + fireThreshold
                 + "]"
                 + "\n[in: "
                 + String.join(", ", in.stream().map(el -> el.getWeight().toString()).collect(Collectors.toList()))
