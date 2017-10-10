@@ -33,6 +33,6 @@ public class Synapse extends DirectedEdge<Neuron> {
 
     @Override
     public String toString() {
-        return origin + " - " + end + ", weight: " + weight;
+        return "{Synapse: " + origin + " - " + end + ", weight: " + weight + "}";
     }
 }

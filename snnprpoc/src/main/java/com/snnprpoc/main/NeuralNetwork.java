@@ -12,7 +12,13 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
 
     @Override
     public String toString() {
-        return null;
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+        for (Object n : getLayers()) {
+            result.append("\nLayer:  " + i++ );
+            result.append(n.toString());
+        }
+        return result.toString();
     }
 
     public NeuralNetwork learn(List<List<List<Integer>>> inputData, List<Integer> scenario) {
@@ -32,7 +38,7 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
         outNodes.get(0).spike(encodedData.get(1).get(0));
     }
 
-    private List<List<List<Double>>> encoder(List<List<List<Integer>>> inputData) {
+    protected List<List<List<Double>>> encoder(List<List<List<Integer>>> inputData) {
         return inputData.stream()
                 .map(row -> row.stream()
                         .map(col -> col.stream()

@@ -2,6 +2,7 @@ package com.snnprpoc.graph;
 
 import java.util.*;
 
+
 public class Layer<T> {
 
     protected List<T> nodes = new ArrayList<>();
@@ -25,6 +26,8 @@ public class Layer<T> {
     }
 
     public String toString() {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (Object n : getNodes()) result.append(n.toString());
+        return result.toString();
     }
 }

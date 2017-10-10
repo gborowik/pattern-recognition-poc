@@ -40,7 +40,7 @@ public class Neuron extends Node<Synapse> {
 
     @Override
     public String toString() {
-        return null;
+        return "\n[Neuron: " + id + " chargeLevel: " + chargeLevel + " thershold: " + fireThreshold + "]";
     }
 
 }

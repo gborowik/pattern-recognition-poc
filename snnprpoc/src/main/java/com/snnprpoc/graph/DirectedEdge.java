@@ -10,6 +10,6 @@ public class DirectedEdge<T> {
     }
 
     public String toString() {
-        return null;
+        return "(" + origin + "-" + end + ")";
     }
 }

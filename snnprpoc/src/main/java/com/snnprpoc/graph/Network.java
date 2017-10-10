@@ -81,7 +81,6 @@ public class Network<T, E> {
         return layers != null && !layers.isEmpty() ? layers.get(layers.size() - 1) : null;
     }
 
-    public String toString() {
-        return null;
-    }
+
+    public String toString() { return null; }
 }
