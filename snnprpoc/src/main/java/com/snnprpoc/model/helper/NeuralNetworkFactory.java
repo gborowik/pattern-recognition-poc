@@ -8,6 +8,7 @@ import one.util.streamex.StreamEx;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -39,10 +40,22 @@ public class NeuralNetworkFactory {
     }
 
     public static Collection<Synapse> generateAllSynapsesBetweenLayerAndNode(Layer<Neuron> layer, Neuron node) {
-        return layer.getNodes().stream().map(n -> new Synapse(n, node)).collect(Collectors.toSet());
+        Set<Synapse> result = layer.getNodes().stream()
+                .map(n -> n.addOutConnection(new Synapse(n, node)))
+                .collect(Collectors.toSet());
+
+        node.addInConnections(result);
+
+        return result;
     }
 
     public static Collection<Synapse> generateAllSynapsesBetweenNodeAndLayer(Neuron node, Layer<Neuron> layer) {
-        return layer.getNodes().stream().map(n -> new Synapse(node, n)).collect(Collectors.toSet());
+        Set<Synapse> result = layer.getNodes().stream()
+                .map(n -> n.addInConnection(new Synapse(node, n)))
+                .collect(Collectors.toSet());
+
+        node.addOutConnections(result);
+
+        return result;
     }
 }
