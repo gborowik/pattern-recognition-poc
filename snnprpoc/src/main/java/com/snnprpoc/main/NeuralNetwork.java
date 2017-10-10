@@ -16,7 +16,8 @@ public class NeuralNetwork extends Network<Neuron, Synapse> {
                 + String.join("\n", layers.stream().map(el -> el.toString())
                 .collect(Collectors.toList()))
                 + "\n\nSYNAPSES:"
-                + String.join("; ", directedEdges.stream().map(el -> el.toString()).collect(Collectors.toList()));
+                + String.join("; ", directedEdges.stream().map(el -> el.toString())
+                .collect(Collectors.toList()));
     }
 
     public NeuralNetwork learn(List<List<List<Integer>>> inputData, List<Integer> scenario) {

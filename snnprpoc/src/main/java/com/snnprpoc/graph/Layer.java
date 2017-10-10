@@ -35,6 +35,7 @@ public class Layer<T> {
     public String toString() {
         return "\nLayer: "
                 + id.toString()
-                + String.join("\n", nodes.stream().map(node -> node.toString()).collect(Collectors.toList()));
+                + String.join("\n", nodes.stream().map(node -> node.toString())
+                .collect(Collectors.toList()));
     }
 }
