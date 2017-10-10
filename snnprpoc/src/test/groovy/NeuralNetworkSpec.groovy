@@ -7,7 +7,7 @@ import static com.snnprpoc.model.helper.NeuralNetworkFactory.generateAllSynapses
 import static com.snnprpoc.model.helper.NeuralNetworkFactory.makeLayerOfSize
 
 
-public class NeuralNetworkSpec extends Specification {
+class NeuralNetworkSpec extends Specification {
 
 
     def createNetwork(int inputLayerSize, int hiddenLayerSize, int outputLayerSize) {

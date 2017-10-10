@@ -1,9 +1,34 @@
 package com.snnprpoc.model
 
+import com.snnprpoc.graph.Layer
 import com.snnprpoc.main.NeuralNetwork
 
-public class BasicNetworkLayoutSpec extends NeuralNetworkSpec {
+class BasicNetworkLayoutSpec extends com.snnprpoc.model.NeuralNetworkSpec {
 
+
+    def "Test Neuron printing"() {
+        Neuron neuron = new Neuron(15);
+
+        String str = neuron.toString()
+
+        expect:
+
+        str == "\n[Neuron: 15 chargeLevel: 0.0 thershold: 1.0]"
+    }
+
+    def "Test Layer printing"() {
+        Neuron neuron = new Neuron(15);
+        Layer layer = new Layer();
+
+        layer.addNode(neuron)
+
+        String str = layer.toString()
+
+        expect:
+
+        str == "\n[Neuron: 15 chargeLevel: 0.0 thershold: 1.0]"
+
+    }
 
     def "Test basic network layout"() {
         int inputLayerSize = 20
